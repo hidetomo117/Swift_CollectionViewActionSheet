@@ -8,13 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func tappedButton(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "SecondViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SecondViewController")
+        present(vc, animated: true, completion: nil)
+    }
+    
 }
 
